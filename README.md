@@ -1,70 +1,162 @@
-# Getting Started with Create React App
+# 🚀 Propeller Aero React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+  <img src="https://cdn-ikponof.nitrocdn.com/vGqfYAGlOLDkYkJqZhYIYKEsibdbZnkc/assets/images/optimized/rev-f684a87/www.propelleraero.com/wp-content/uploads/2023/05/footer-logo.svg" alt="Propeller Aero Logo" width="300" />
 
-In the project directory, you can run:
+  <br/><br/>
 
-### `npm start`
+  [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
+  [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zeeshansaeed6/my-app)
+  [![PR Merged](https://img.shields.io/badge/PR_1-Merged-8957E5?style=for-the-badge&logo=git&logoColor=white)](https://github.com/zeeshansaeed6/my-app/pull/1)
+  [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  <p align="center">
+    A modernized React application featuring automated Git & CI/CD workflows, custom branding integration for <b>Propeller Aero DirtMate</b>, and automated branch lifecycle management via GitHub CLI.
+  </p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  [Explore App](https://www.propelleraero.com/dirtmate/) • [View Pull Request](https://github.com/zeeshansaeed6/my-app/pull/1) • [Automated Script](command.sh)
 
-### `npm test`
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📌 Table of Contents
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Overview](#-overview)
+- [Tech Stack](#-tech-stack)
+- [Workflow Automation](#-workflow-automation)
+- [Project Structure](#-project-structure)
+- [Quick Start](#-quick-start)
+- [Git Workflow & PR History](#-git-workflow--pr-history)
+- [Author](#-author)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📖 Overview
 
-### `npm run eject`
+This repository demonstrates an end-to-end automated Software Engineering task workflow:
+1. Bootstrapped a responsive React SPA using `create-react-app`.
+2. Initialized Git version control and provisioned a public GitHub repository with `gh cli`.
+3. Created an isolated feature branch `update_logo`.
+4. Replaced default assets with the official **Propeller Aero** vector logo and integrated the **DirtMate** destination URL.
+5. Pushed upstream, initiated Pull Request `#1`, and automatically merged into `master` using administrator privileges.
+6. Documented all operations within an executable automation script ([`command.sh`](command.sh)).
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠 Tech Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Technology | Purpose |
+| :--- | :--- |
+| **React 18** | Frontend library for UI components |
+| **HTML5 / SVG** | Scalable vector graphics and markup |
+| **CSS3** | Modern styling and responsive layouts |
+| **GitHub CLI (`gh`)** | Automated repository provisioning, PR lifecycle, and merging |
+| **Git** | Distributed version control and branch branching strategy |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## ⚡ Workflow Automation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+All execution steps were orchestrated sequentially via the terminal and recorded in [`command.sh`](command.sh):
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```mermaid
+flowchart LR
+    A[1. create-react-app] --> B[2. git init & gh repo create]
+    B --> C[3. git checkout update_logo]
+    C --> D[4. Replace Logo & Link]
+    D --> E[5. git commit & push]
+    E --> F[6. gh pr create]
+    F --> G[7. gh pr merge --admin]
+    G --> H[8. command.sh audit]
+```
 
-### Code Splitting
+### Script Execution Summary
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Step | Action | Command |
+| :--: | :----- | :------ |
+| **01** | Create React App | `npx create-react-app my-app` |
+| **02** | Initialize & Publish Repo | `gh repo create my-app --public --source=. --remote=origin --push` |
+| **03** | Branch Switch | `git checkout -b update_logo` |
+| **04** | Update Brand Logo | `curl -sL <logo_url> -o src/logo.svg` |
+| **05** | Update App Link | Update `href` in `src/App.js` to DirtMate |
+| **06** | Stage & Push | `git commit -m "Update logo and link"` & `git push -u origin update_logo` |
+| **07** | Create Pull Request | `gh pr create --base master --head update_logo` |
+| **08** | Merge Pull Request | `gh pr merge 1 --admin --merge` |
+| **09** | Export Commands | Record execution log in `command.sh` |
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 📂 Project Structure
 
-### Making a Progressive Web App
+```bash
+my-app/
+├── public/
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── manifest.json
+│   └── robots.txt
+├── src/
+│   ├── App.css
+│   ├── App.js           # Integrated with DirtMate link
+│   ├── App.test.js
+│   ├── index.css
+│   ├── index.js
+│   ├── logo.svg         # Propeller Aero vector logo
+│   └── setupTests.js
+├── command.sh           # Bash script of all automated CLI commands
+├── package.json
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🚀 Quick Start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v16 or higher)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+- [GitHub CLI](https://cli.github.com/)
 
-### Deployment
+### 1. Clone the repository
+```bash
+git clone https://github.com/zeeshansaeed6/my-app.git
+cd my-app
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### 2. Install dependencies
+```bash
+npm install
+```
 
-### `npm run build` fails to minify
+### 3. Run development server
+```bash
+npm start
+```
+Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 4. Build for production
+```bash
+npm run build
+```
+
+---
+
+## 🔄 Git Workflow & PR History
+
+- **Repository**: [`zeeshansaeed6/my-app`](https://github.com/zeeshansaeed6/my-app)
+- **Base Branch**: `master`
+- **Feature Branch**: `update_logo`
+- **Pull Request**: [#1 Update logo and link](https://github.com/zeeshansaeed6/my-app/pull/1) — **Status: MERGED**
+- **Changes Merged**:
+  - `src/logo.svg`: Replaced React logo with Propeller Aero SVG.
+  - `src/App.js`: Pointed landing link to [Propeller Aero DirtMate](https://www.propelleraero.com/dirtmate/).
+
+---
+
+## 👤 Author
+
+**Zeeshan Saeed**
+- GitHub: [@zeeshansaeed6](https://github.com/zeeshansaeed6)
+- Repository: [https://github.com/zeeshansaeed6/my-app](https://github.com/zeeshansaeed6/my-app)
