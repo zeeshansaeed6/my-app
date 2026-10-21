@@ -1,162 +1,200 @@
-# 🚀 Propeller Aero React App
-
 <div align="center">
 
-  <img src="https://cdn-ikponof.nitrocdn.com/vGqfYAGlOLDkYkJqZhYIYKEsibdbZnkc/assets/images/optimized/rev-f684a87/www.propelleraero.com/wp-content/uploads/2023/05/footer-logo.svg" alt="Propeller Aero Logo" width="300" />
-
-  <br/><br/>
-
-  [![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
-  [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zeeshansaeed6/my-app)
-  [![PR Merged](https://img.shields.io/badge/PR_1-Merged-8957E5?style=for-the-badge&logo=git&logoColor=white)](https://github.com/zeeshansaeed6/my-app/pull/1)
-  [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+  # ⚡ My React App
 
   <p align="center">
-    A modernized React application featuring automated Git & CI/CD workflows, custom branding integration for <b>Propeller Aero DirtMate</b>, and automated branch lifecycle management via GitHub CLI.
+    <b>A modern, high-performance React single-page application built with automated DevOps & continuous delivery workflows.</b>
   </p>
 
-  [Explore App](https://www.propelleraero.com/dirtmate/) • [View Pull Request](https://github.com/zeeshansaeed6/my-app/pull/1) • [Automated Script](command.sh)
+  <p align="center">
+    <a href="https://react.dev">
+      <img src="https://img.shields.io/badge/React-18.x-61DAFB?style=for-the-badge&logo=react&logoColor=20232A" alt="React 18" />
+    </a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+      <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+    </a>
+    <a href="https://github.com/zeeshansaeed6/my-app">
+      <img src="https://img.shields.io/badge/GitHub-my--app-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+    </a>
+    <a href="https://github.com/zeeshansaeed6/my-app/pull/1">
+      <img src="https://img.shields.io/badge/PR_%231-Merged-8957E5?style=for-the-badge&logo=git&logoColor=white" alt="PR Merged" />
+    </a>
+    <a href="LICENSE">
+      <img src="https://img.shields.io/badge/License-MIT-00C853?style=for-the-badge" alt="MIT License" />
+    </a>
+  </p>
+
+  <p align="center">
+    <a href="#-features">Features</a> •
+    <a href="#-quick-start">Quick Start</a> •
+    <a href="#-tech-stack">Tech Stack</a> •
+    <a href="#-devops-automation-pipeline">DevOps Pipeline</a> •
+    <a href="#-project-architecture">Architecture</a> •
+    <a href="#-author">Author</a>
+  </p>
 
 </div>
 
 ---
 
-## 📌 Table of Contents
+## 🌟 Highlights & Key Features
 
-- [Overview](#-overview)
-- [Tech Stack](#-tech-stack)
-- [Workflow Automation](#-workflow-automation)
-- [Project Structure](#-project-structure)
-- [Quick Start](#-quick-start)
-- [Git Workflow & PR History](#-git-workflow--pr-history)
-- [Author](#-author)
-
----
-
-## 📖 Overview
-
-This repository demonstrates an end-to-end automated Software Engineering task workflow:
-1. Bootstrapped a responsive React SPA using `create-react-app`.
-2. Initialized Git version control and provisioned a public GitHub repository with `gh cli`.
-3. Created an isolated feature branch `update_logo`.
-4. Replaced default assets with the official **Propeller Aero** vector logo and integrated the **DirtMate** destination URL.
-5. Pushed upstream, initiated Pull Request `#1`, and automatically merged into `master` using administrator privileges.
-6. Documented all operations within an executable automation script ([`command.sh`](command.sh)).
+<table>
+  <tr>
+    <td width="50%">
+      <h3>⚡ Blazing Fast UI</h3>
+      <p>Engineered with modular React components and an optimized asset pipeline for sub-second rendering and fluid interactions.</p>
+    </td>
+    <td width="50%">
+      <h3>🤖 Automated DevOps</h3>
+      <p>Fully automated branch management, pull request generation, and bypass merging using the official GitHub CLI (<code>gh</code>).</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🎨 Responsive Design</h3>
+      <p>Clean modern UI with vector assets, dynamic animations, and seamless cross-device screen responsiveness.</p>
+    </td>
+    <td width="50%">
+      <h3>📜 Auditable Automation</h3>
+      <p>Every terminal command is cataloged in <a href="command.sh"><code>command.sh</code></a> for complete reproducibility and verification.</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
 ## 🛠 Tech Stack
 
-| Technology | Purpose |
-| :--- | :--- |
-| **React 18** | Frontend library for UI components |
-| **HTML5 / SVG** | Scalable vector graphics and markup |
-| **CSS3** | Modern styling and responsive layouts |
-| **GitHub CLI (`gh`)** | Automated repository provisioning, PR lifecycle, and merging |
-| **Git** | Distributed version control and branch branching strategy |
+<div align="center">
+
+| Layer | Technology | Description |
+| :--- | :--- | :--- |
+| **Frontend Core** | `React 18` | Virtual DOM rendering & state management |
+| **Styling & Assets**| `CSS3` & `SVG` | Flexible layouts & scalable vector branding |
+| **Tooling & Build** | `Create React App` / `Webpack` | Zero-config build pipeline & dev server |
+| **Version Control** | `Git` | Distributed source code versioning |
+| **CI / CD Tooling** | `GitHub CLI (gh)` | Programmatic repo, PR, and merge automation |
+
+</div>
 
 ---
 
-## ⚡ Workflow Automation
+## 🔄 DevOps Automation Pipeline
 
-All execution steps were orchestrated sequentially via the terminal and recorded in [`command.sh`](command.sh):
+The repository lifecycle is automated end-to-end through sequential CLI scripts:
 
 ```mermaid
-flowchart LR
-    A[1. create-react-app] --> B[2. git init & gh repo create]
-    B --> C[3. git checkout update_logo]
-    C --> D[4. Replace Logo & Link]
-    D --> E[5. git commit & push]
-    E --> F[6. gh pr create]
-    F --> G[7. gh pr merge --admin]
-    G --> H[8. command.sh audit]
+flowchart TD
+    subgraph INIT ["1. App Initialization"]
+        A["npx create-react-app my-app"] --> B["cd my-app"]
+        B --> C["git init & gh repo create"]
+    end
+
+    subgraph FEATURE ["2. Feature Branch Lifecycle"]
+        C --> D["git checkout -b update_logo"]
+        D --> E["Update vector logo & navigation link"]
+        E --> F["git commit & git push"]
+    end
+
+    subgraph CI ["3. Automated Delivery"]
+        F --> G["gh pr create (PR #1)"]
+        G --> H["gh pr merge --admin --merge"]
+        H --> I["Export commands to command.sh"]
+    end
+
+    classDef stage fill:#1e1e2e,stroke:#89b4fa,stroke-width:2px,color:#cdd6f4;
+    class A,B,C,D,E,F,G,H,I stage;
 ```
 
-### Script Execution Summary
+### Automation Log
 
-| Step | Action | Command |
-| :--: | :----- | :------ |
-| **01** | Create React App | `npx create-react-app my-app` |
-| **02** | Initialize & Publish Repo | `gh repo create my-app --public --source=. --remote=origin --push` |
-| **03** | Branch Switch | `git checkout -b update_logo` |
-| **04** | Update Brand Logo | `curl -sL <logo_url> -o src/logo.svg` |
-| **05** | Update App Link | Update `href` in `src/App.js` to DirtMate |
-| **06** | Stage & Push | `git commit -m "Update logo and link"` & `git push -u origin update_logo` |
-| **07** | Create Pull Request | `gh pr create --base master --head update_logo` |
-| **08** | Merge Pull Request | `gh pr merge 1 --admin --merge` |
-| **09** | Export Commands | Record execution log in `command.sh` |
+| Step | Action | Command | Status |
+| :--: | :--- | :--- | :---: |
+| `01` | Bootstrap Project | `npx create-react-app my-app` | ✅ Done |
+| `02` | Create GitHub Repo | `gh repo create my-app --public --source=. --remote=origin --push` | ✅ Done |
+| `03` | Branch Out | `git checkout -b update_logo` | ✅ Done |
+| `04` | Asset Replacement | `curl -sL <logo_url> -o src/logo.svg` | ✅ Done |
+| `05` | Route / Link Update | Updated `href` in `src/App.js` | ✅ Done |
+| `06` | Stage & Push | `git commit -m "Update logo and link"` | ✅ Done |
+| `07` | Open Pull Request | `gh pr create --base master --head update_logo` | ✅ Done |
+| `08` | Direct Merge | `gh pr merge 1 --admin --merge` | ✅ Merged |
+| `09` | Workflow Script | Saved to [`command.sh`](command.sh) | ✅ Done |
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Architecture
 
-```bash
+```graphql
 my-app/
-├── public/
-│   ├── favicon.ico
-│   ├── index.html
-│   ├── manifest.json
-│   └── robots.txt
-├── src/
-│   ├── App.css
-│   ├── App.js           # Integrated with DirtMate link
-│   ├── App.test.js
-│   ├── index.css
-│   ├── index.js
-│   ├── logo.svg         # Propeller Aero vector logo
-│   └── setupTests.js
-├── command.sh           # Bash script of all automated CLI commands
-├── package.json
-└── README.md
+├── 📂 public/
+│   ├── 📄 favicon.ico       # Application favicon
+│   ├── 📄 index.html        # Main HTML mount template
+│   ├── 📄 manifest.json     # PWA progressive web app metadata
+│   └── 📄 robots.txt        # Search engine crawlers policy
+├── 📂 src/
+│   ├── 📄 App.css           # Core styling and animations
+│   ├── ⚛️ App.js            # Main application component & routes
+│   ├── 🧪 App.test.js       # Component test suites
+│   ├── 📄 index.css         # Global CSS reset & base styles
+│   ├── ⚛️ index.js          # React DOM entry point
+│   ├── 🎨 logo.svg          # Modernized vector brand logo
+│   └── 🧪 setupTests.js     # Jest & testing-library config
+├── 📜 command.sh            # Complete automated bash script
+├── 📦 package.json          # Dependencies & scripts
+└── 📘 README.md             # Project documentation
 ```
 
 ---
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v16 or higher)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-- [GitHub CLI](https://cli.github.com/)
-
-### 1. Clone the repository
+### 1. Clone & Navigate
 ```bash
 git clone https://github.com/zeeshansaeed6/my-app.git
 cd my-app
 ```
 
-### 2. Install dependencies
+### 2. Install Packages
 ```bash
 npm install
 ```
 
-### 3. Run development server
+### 3. Launch Development Server
 ```bash
 npm start
 ```
-Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
+> Runs the app at [http://localhost:3000](http://localhost:3000) with hot-module reloading enabled.
 
-### 4. Build for production
+### 4. Production Build
 ```bash
 npm run build
 ```
+> Compiles and optimizes assets into the `build/` folder ready for deployment.
 
 ---
 
-## 🔄 Git Workflow & PR History
+## 📜 Automation Script (`command.sh`)
 
-- **Repository**: [`zeeshansaeed6/my-app`](https://github.com/zeeshansaeed6/my-app)
-- **Base Branch**: `master`
-- **Feature Branch**: `update_logo`
-- **Pull Request**: [#1 Update logo and link](https://github.com/zeeshansaeed6/my-app/pull/1) — **Status: MERGED**
-- **Changes Merged**:
-  - `src/logo.svg`: Replaced React logo with Propeller Aero SVG.
-  - `src/App.js`: Pointed landing link to [Propeller Aero DirtMate](https://www.propelleraero.com/dirtmate/).
+You can inspect or execute the full workflow at any time:
+
+```bash
+cat command.sh
+```
+
+Or view directly online: **[command.sh](https://github.com/zeeshansaeed6/my-app/blob/master/command.sh)**
 
 ---
 
 ## 👤 Author
 
 **Zeeshan Saeed**
-- GitHub: [@zeeshansaeed6](https://github.com/zeeshansaeed6)
-- Repository: [https://github.com/zeeshansaeed6/my-app](https://github.com/zeeshansaeed6/my-app)
+- **GitHub**: [@zeeshansaeed6](https://github.com/zeeshansaeed6)
+- **Repository**: [https://github.com/zeeshansaeed6/my-app](https://github.com/zeeshansaeed6/my-app)
+- **Pull Request #1**: [Merged on master](https://github.com/zeeshansaeed6/my-app/pull/1)
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ using React & GitHub CLI • MIT License</sub>
+</div>
